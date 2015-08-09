@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 /******************************************************************
-**	说    明: $W			单个option宽度
-**			  $H			单个option高度
-**			  $P			单个option内边距
-**			  $C			字体颜色
-**			  $HOV-C		鼠标hover字体颜色
-**			  $HOV-BG		鼠标hover背景色
-**			  $MAX-SIZE		下拉最大高度,大于0限制,小于等于0不限制
+**	Intro   : $W			One option width / 单个option宽度
+**	说明	  $H			One option height / 单个option高度
+**			  $P			One option padding / 单个option内边距
+**			  $C			Font color / 字体颜色
+**			  $HOV-C		Hover color / 鼠标hover字体颜色
+**			  $HOV-BG		hover bg / 鼠标hover背景色
+**			  $MAX-SIZE		max height / 下拉最大高度,大于0限制,小于等于0不限制
 **
 *******************************************************************
 **
-**	使用示例: @include select(360px, 36px, 10px, #777, #FFF, #299fff, 0);
-**
+**	Example: @include select(360px, 36px, 10px, #777, #FFF, #299fff, 0);
+**	示   例
 *******************************************************************/
 
 @mixin select( $W, $H, $P, $C, $HOV-C, $HOV-BG, $SIZE) {
