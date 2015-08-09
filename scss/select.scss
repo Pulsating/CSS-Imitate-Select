@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import "mixins";
+
+// 格式化
+body, ul, li {
+	margin: 0;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+// 应用
+@include select(360px, 36px, 10px, #777, #333, #f0f0f0, 0);

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/******************************************************************
+**	说    明: $W			单个option宽度
+**			  $H			单个option高度
+**			  $P			单个option内边距
+**			  $C			字体颜色
+**			  $HOV-C		鼠标hover字体颜色
+**			  $HOV-BG		鼠标hover背景色
+**			  $MAX-SIZE		下拉最大高度,大于0限制,小于等于0不限制
+**
+*******************************************************************
+**
+**	使用示例: @include select(360px, 36px, 10px, #777, #FFF, #299fff, 0);
+**
+*******************************************************************/
+body, ul, li {
+  margin: 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.select {
+  z-index: 1;
+  position: relative;
+  width: 360px;
+  height: 36px; }
+  .select:hover ul {
+    visibility: visible; }
+  .select .view {
+    position: relative;
+    border: 1px solid #CCC; }
+    .select .view:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 16px;
+      right: 10px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: #777 transparent transparent transparent; }
+  .select .option {
+    height: 16px;
+    line-height: 16px;
+    padding: 10px;
+    color: #777; }
+  .select ul {
+    visibility: hidden;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #CCC; }
+  .select li {
+    cursor: pointer;
+    border-top: 1px solid #CCC; }
+    .select li:first-child {
+      border-top: 0; }
+    .select li:hover {
+      color: #333;
+      background-color: #f0f0f0; }
+
+/*# sourceMappingURL=select.css.map */
