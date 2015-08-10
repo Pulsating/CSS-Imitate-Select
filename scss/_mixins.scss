@@ -21,10 +21,6 @@
 		position: relative;
 		width: $W;
 		height: $H;
-
-		&:hover ul {
-			visibility: visible;
-		}
 		
 		.view {
 			position: relative;
@@ -54,10 +50,11 @@
 				max-height: $SIZE * ($H + 1) - 1;
 				overflow-y: scroll;
 			}
-			visibility: hidden;
+			display: none;
 			border-width: 0 1px 1px 1px;
 			border-style: solid;
 			border-color: #CCC;
+			background-color: #FFF;
 		}
 		li {
 			cursor: pointer;
@@ -71,6 +68,17 @@
 				color: $HOV-C;
 				background-color: $HOV-BG;
 			}
+		}
+	}
+
+	.noscript {	// If not support JS / 如果不支持JS则使用hover
+		ul {
+			display: block;
+			visibility: hidden;
+		}
+
+		&:hover ul {
+			visibility: visible;
 		}
 	}
 }
