@@ -11,7 +11,9 @@ ul {
 }
 
 // Call function without limited max height 调用函数不限制最大高度
-@include select(360px, 36px, 10px, #777, #333, #f0f0f0, 0);
+.select {
+	@include select(360px, 36px, 10px, #777, #333, #f0f0f0, 0);
+}
 
 // Call function with limited max height 调用函数，限制最大下拉高度为4个
 // @include select(360px, 36px, 10px, #777, #333, #f0f0f0, 4);

@@ -16,62 +16,63 @@
 *******************************************************************/
 
 @mixin select( $W, $H, $P, $C, $HOV-C, $HOV-BG, $SIZE) {
-	.select {
+	@at-root .select {
 		z-index: 1;
 		position: relative;
 		width: $W;
 		height: $H;
+	}
 		
-		.view {
-			position: relative;
-			border: 1px solid #CCC;
+	.view {
+		position: relative;
+		border: 1px solid #CCC;
 
-			&:after {
-				content: " ";
-				display: block;
-				position: absolute;
-				width: 0;
-				height: 0;
-				top: $P + 6;
-				right: $P;
-				border-width: 6px;
-				border-style: solid;
-				border-color: $C transparent transparent transparent;
-			}
-		}
-		.option {
-			height: $H - $P*2;
-			line-height: $H - $P*2; 
-			padding: $P;
-			color: $C;
-		}
-		ul {
-			@if ( $SIZE > 0){
-				max-height: $SIZE * ($H + 1) - 1;
-				overflow-y: scroll;
-			}
-			display: none;
-			border-width: 0 1px 1px 1px;
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: $P + 6;
+			right: $P;
+			border-width: 6px;
 			border-style: solid;
-			border-color: #CCC;
-			background-color: #FFF;
+			border-color: $C transparent transparent transparent;
 		}
-		li {
-			cursor: pointer;
-			border-top: 1px solid #CCC;
+	}
+	.option {
+		height: $H - $P*2;
+		line-height: $H - $P*2; 
+		padding: $P;
+		color: $C;
+	}
+	ul {
+		@if ( $SIZE > 0){
+			max-height: $SIZE * ($H + 1) - 1;
+			overflow-y: scroll;
+		}
+		display: none;
+		border-width: 0 1px 1px 1px;
+		border-style: solid;
+		border-color: #CCC;
+		background-color: #FFF;
+	}
+	li {
+		cursor: pointer;
+		border-top: 1px solid #CCC;
 
-			&:first-child {
-				border-top: 0;
-			}
+		&:first-child {
+			border-top: 0;
+		}
 
-			&:hover {
-				color: $HOV-C;
-				background-color: $HOV-BG;
-			}
+		&:hover {
+			color: $HOV-C;
+			background-color: $HOV-BG;
 		}
 	}
 
-	.noscript {	// If not support JS / 如果不支持JS则使用hover
+
+	@at-root &.noscript {	// If not support JS / 如果不支持JS则使用hover
 		ul {
 			display: block;
 			visibility: hidden;
