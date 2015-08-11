@@ -26,6 +26,7 @@
 	.view {
 		position: relative;
 		border: 1px solid #CCC;
+		padding: $P 24px $P $P;
 
 		&:after {
 			content: " ";
@@ -41,10 +42,14 @@
 		}
 	}
 	.option {
+		display: block;
 		height: $H - $P*2;
 		line-height: $H - $P*2; 
 		padding: $P;
 		color: $C;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
 	}
 	ul {
 		@if ( $SIZE > 0){
@@ -60,6 +65,7 @@
 	li {
 		cursor: pointer;
 		border-top: 1px solid #CCC;
+		padding: $P;
 
 		&:first-child {
 			border-top: 0;
