@@ -8,12 +8,15 @@ $(function(){
 	_view.on('click', function(){
 		_ul.toggle();
 	});
-	_select.on('mouseleave', function() {
-		_ul.hide();
-	});
 
-	_ul.on('click', _ul.find("li"),function(e){
+	_ul.on('click', 'li',function(e){
 		var option = e.target;
 		_view.html(option.innerHTML);
+		_ul.fadeOut(200);
 	});
+	$(document).click(function (event) {
+        if ($(event.target).parents('.select').length == 0) {
+            _ul.fadeOut(200);
+        }
+    });
 });
